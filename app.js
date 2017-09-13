@@ -6,7 +6,8 @@ angular.module("sproFinder", ["ui.router"]).config(function($stateProvider, $url
   })
   .state("nearme", {
     url: "/nearme",
-    templateUrl: "./js/nearme/nearmeTmpl.html"
+    templateUrl: "./js/nearme/nearmeTmpl.html",
+    controller: "nearmeCtrl"
   })
   .state("search", {
     url: "/search",

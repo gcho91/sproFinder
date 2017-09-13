@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="sproFinder">
-  <head></head>
+  <head>
+
+
+    <link rel="stylesheet" href="./css/style.css"></link>
+  </head>
   <body>
 
 <ul>
@@ -12,16 +16,26 @@
 </ul>
 
 
-<ui-view>
 
-</ui-view>
+
+  </body>
+<ui-view></ui-view>
+
+
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ7pRoBaNOf3BHxR_Jw3_6T35G6yhLwec"
+    async defer charset="utf-8"></script>
+
     <script src="app.js"></script>
     <script src="./js/nearme/nearmeCtrl.js"></script>
-    <scrip src="./js/search/searchCtrl.js"></scrip>
+    <script src="./js/search/searchCtrl.js"></script>
+    <script src="./js/mapservice.js"></script>
+
 
     </script>
   </body>
