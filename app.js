@@ -4,6 +4,14 @@ angular.module("sproFinder", ["ui.router"]).config(function($stateProvider, $url
     url: "/",
     templateUrl: "./js/about/aboutTmpl.html"
   })
+  .state("nearme", {
+    url: "/nearme",
+    templateUrl: "./js/nearme/nearmeTmpl.html"
+  })
+  .state("search", {
+    url: "/search",
+    templateUrl: "./js/search/searchTmpl.html"
+  })
   .state("learn", {
     url: "/learn",
     templateUrl: "./js/learn/learnTmpl.html"
