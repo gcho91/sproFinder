@@ -32,7 +32,17 @@ angular.module("sproFinder").controller("searchCtrl", function($scope, searchSrv
   //        Locations: results[i].location.address1
   //      }
   //      console.log(obj)
-searchSrv.getSomething(75201, "coffee").then(function(response){
+searchSrv.getSomething(10022, "blue bottle").then(function(response){
   console.log(response.data.businesses)
+  console.log(response.data.businesses[0])
+  console.log(response.data.businesses[0].rating)
+  // console.log(response.data.businesses[0].name)
+  // console.log(response.data.businesses[1])
+  // console.log(response.data.businesses[2])
+  $scope.name = response.data.businesses[0].name;
+  $scope.phone = response.data.businesses[0].display_phone;
+  $scope.rating = response.data.businesses[0].rating;
+  $scope.photo = response.data.businesses[0].image_url;
 })
+
 })
