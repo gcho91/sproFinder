@@ -1,5 +1,15 @@
 angular.module("sproFinder").controller("nearmeCtrl", function($scope) {
-
+  new Promise(function(resolve, reject){
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      resolve(pos)
+    })
+  }).then(function(response){
+    initMap(response)
+  })
 //   var map = new google.maps.Map(document.getElementById('map'), {
 //         zoom: 5,
 //         center: new google.maps.LatLng(32.7777, -96)
@@ -35,51 +45,61 @@ angular.module("sproFinder").controller("nearmeCtrl", function($scope) {
 
 var map;
 var infowindow;
+var pos;
 
-function initMap() {
-  console.log('it works');
-  var devmtn = {lat: 32.77777, lng: -96.8};
+  function initMap(geolocation) {
+    // var devmtn = {lat: 32.77777, lng: -96.8};
+    var infoWindow;
 
-  //initialize map to geolocation//
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: geolocation,
+      zoom: 16
+    });
+    // map.setCenter(geolocation);
+    infoWindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+    // service.nearbySearch({
+    //   location: geolocation,
+    //   radius: 500,
+    //   keyword: 'beer'
+    // }, callback);
 
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: devmtn,
-    zoom: 16
-  });
-
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch({
-    location: devmtn,
-    radius: 600,
-    type: ['cafe']
-  }, callback);
-}
-
-function callback(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
+    infoWindow.setPosition(geolocation);
+    infoWindow.setContent('Current location');
+    infoWindow.open(map);
+    // map.setCenter(geolocation);
+        // infowindow = new google.maps.InfoWindow();
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch({
+        location: geolocation,
+        // set to po^s
+        radius: 600,
+        type: ['cafe']
+      }, callback);
     }
-  }
-}
 
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
+    function callback(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+        }
+      }
+    }
 
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name + "<br>" + "Address: " + place.vicinity);
-    console.log(place)
+    function createMarker(place) {
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
 
-    infowindow.open(map, this);
-  });
-}
-initMap();
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name + "<br>" + "Address: " + place.vicinity);
+        console.log(place)
+
+        infowindow.open(map, this);
+      });
+    }
 
 
 })
