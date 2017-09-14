@@ -4,18 +4,26 @@
 
 <p>Input in text field name of cafe and zip, display top 3 results</p>
 
-<input type="text" placeholder = "search name here">
-<input type="text" placeholder="search zip here" /><br />
+<input type="text" placeholder = "search name here" ng-model="searchTerm">
+<input type="text" placeholder="search zip here" ng-model="searchZip"/>
+<button ng-click="getSomething(searchZip, searchTerm)">Search</button>
+
+
+
+
+<p ng-repeat = "cafe in cafes | limitTo: 3">
 
 <!-- THIS SECTION IS FOR PLACING SEARCH RESULTS -->
-{{name}}
 <br />
-Rating: {{ rating }}
+{{cafe.name}}
+<br />
+Rating: {{ cafe.rating }}
 <br />
 
 {{ phone }}
 
 <br />
 
-<img src="{{photo}}" style="width: 500px"/>
+<img ng-src="{{cafe.image_url}}" style="width: 500px"/>
 <!-- end of THIS SECTION IS FOR PLACING SEARCH RESULTS -->
+</p>
