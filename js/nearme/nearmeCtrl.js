@@ -57,7 +57,7 @@ function initMap() {
   service.nearbySearch({
     location: devmtn,
     radius: 600,
-    type: ['restaurant']
+    type: ['cafe']
   }, callback);
 }
 
@@ -77,7 +77,9 @@ function createMarker(place) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
+    infowindow.setContent(place.name + "<br>" + "Address: " + place.vicinity);
+    console.log(place)
+
     infowindow.open(map, this);
   });
 }
