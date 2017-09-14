@@ -2,18 +2,26 @@
 <html ng-app="sproFinder">
   <head>
 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="./css/style.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
   </head>
   <body>
 
-<ul>
-  <li><a ui-sref="about">About/[home]</a></li>
+
+
+<div class="header">
+  <!-- <img src="img/hot-coffee-icon-74753.png" style="width: 50px"> -->
+<ul class="list-unstyled">
+  <li>SproFinder</li>
+  <li><a ui-sref="about">ABOUT/[home]</a></li>
   <li><a ui-sref="nearme">Near Me</a></li>
   <li><a ui-sref="search">Search by Name</a></li>
   <li><a ui-sref="learn">Learn</a></li>
-
 </ul>
+</div>
 
 
 
@@ -27,8 +35,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+<!-- 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&libraries=places"
+    async defer charset="utf-8"></script> -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ7pRoBaNOf3BHxR_Jw3_6T35G6yhLwec"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUShGBZg6t_deeiN8MH7OqHhaVWn39Y14&libraries=places"
     async defer charset="utf-8"></script>
 
     <script src="app.js"></script>
