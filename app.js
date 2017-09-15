@@ -16,7 +16,8 @@ angular.module("sproFinder", ["ui.router"]).config(function($stateProvider, $url
   })
   .state("learn", {
     url: "/learn",
-    templateUrl: "./js/learn/learnTmpl.html"
+    templateUrl: "./js/learn/learnTmpl.html",
+    controller: "learnCtrl"
   })
 
 })

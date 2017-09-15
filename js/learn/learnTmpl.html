@@ -1,5 +1,18 @@
-<h1>Mom's spaghetti</h1>
-<p>This is where you can learn about different coffee drinks. (pull data from JSON service or another API)</p>
 
 
-<img src="img/spag.jpg" style="width: 500px">
+<h1>Learn About Coffee Drinks</h1>
+<p>Know how to order espresso without embarrassing yourself.</p>
+
+
+<!-- <img src="img/spag.jpg" style="width: 500px"> -->
+
+
+<div ng-repeat = "coffee in coffeeTerms">
+
+
+  {{coffee.name}} <br>
+  {{coffee.desc}} <br />
+  <img src="{{ coffee.image}}" width = "50%" />
+
+</div>
+<!-- {{coffeeTerms.name }} -->
