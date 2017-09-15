@@ -1,10 +1,29 @@
+.container {
+  /*display: inline-block;*/
+  /*padding: 50px;*/
+  display: flex;
+  justify-content: center;
+
+}
+
+
 #map {
  height: 600px;
- width: 80%;
- margin: 0 auto;
- margin-top: 50px;
+ width: 70%;
+ margin: 0;
+ /*margin-top: 50px;*/
  /*padding: 50px 50px 50px 50px;*/
+ /*float: left;*/
 }
+.details-container{
+  padding: 0 1%;
+}
+
+#mapdetails {
+
+}
+
+
 
 
 .header{

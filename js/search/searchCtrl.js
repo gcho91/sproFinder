@@ -48,8 +48,8 @@ angular.module("sproFinder").controller("searchCtrl", function($scope, searchSrv
       // $scope.photo = response.data.businesses[0].image_url;
 
       $scope.cafes = response.data.businesses;
-      
-      console.log(response.data.businesses[0].image_url);
+
+  
 
 
       // $scope.zip =

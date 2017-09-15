@@ -12,7 +12,21 @@
 
 <!-- above this line is old stuff -->
 <!-- below is NEWWWWW -->
+<div class="container">
 
 <div id="map"></div>
+<!-- set map and mapdetails in one inline element, then set 80-20% or something-->
+
+<div class="details-container">
+
+<h3>Cafes Near Me</h3>
+<div id="mapdetails" ng-repeat="place in places">
+
+  {{ place.name }}
+</div>
+</div>
+
+
+</div> <!--container ends -->
 <!-- Replace the value of the key parameter with your own API key. -->
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&libraries=places&callback=initMap" async defer></script> -->

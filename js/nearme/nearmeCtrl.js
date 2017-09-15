@@ -68,7 +68,7 @@ var pos;
     infoWindow.setContent('Current location');
     infoWindow.open(map);
     // map.setCenter(geolocation);
-        // infowindow = new google.maps.InfoWindow();
+        infowindow = new google.maps.InfoWindow();
       var service = new google.maps.places.PlacesService(map);
       service.nearbySearch({
         location: geolocation,
@@ -79,6 +79,9 @@ var pos;
     }
 
     function callback(results, status) {
+      console.log(results);
+      $scope.$apply($scope.places = results)
+
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
           createMarker(results[i]);
@@ -94,7 +97,7 @@ var pos;
       });
 
       google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name + "<br>" + "Address: " + place.vicinity);
+        infowindow.setContent("<strong>" + place.name + "</strong>" + "<br>"  + "Address: " + place.vicinity + "<br>" + "Rating: " + place.rating);
         console.log(place)
 
         infowindow.open(map, this);

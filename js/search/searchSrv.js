@@ -12,7 +12,13 @@ angular.module("sproFinder").service("searchSrv", function($http){
           query_string:
             client_secret + '&' + client_id + '&location=' + zip + '&term=' + term,
           access_token: access_token
-        });
+        }).then(function(response){
+          console.log(response);
+          /*return $http.get('address/to/google' + response.data[0].coordinates ).then(function(google){
+
+        })*/
+          return response;
+        })
       };
 
 
