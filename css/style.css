@@ -1,8 +1,35 @@
 .container {
   /*display: inline-block;*/
   /*padding: 50px;*/
-  display: flex;
-  justify-content: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+.about-container {
+  background-image: url("../img/jeremy-ricketts-14146.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  /*height: 100vh;*/
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
+  color: black;
+  text-align: right;
+  /*background-size: 100% 100%;
+  width: 100vw;
+  height: 500px;*/
+  /*background-repeat: no-repeat;*/
+  margin-top: -20px;
+  
+}
+
+.about-text {
+  padding: 100px 100px 0px 40px;
+}
+
+
+
+.container-fluid {
+  padding-bottom: 0;
 }
 
 
@@ -33,6 +60,10 @@ margin: 0 auto;
 
 .hello{
   color: red;
+}
+
+.navbar {
+  background-color: white;
 }
 
 li{

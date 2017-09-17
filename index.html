@@ -2,33 +2,60 @@
 <html ng-app="sproFinder">
   <head>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"></link>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 
   </head>
+
+
   <body>
 
 
 
-<div class="header">
-  <!-- <img src="img/hot-coffee-icon-74753.png" style="width: 50px"> -->
-<ul class="list-unstyled">
-  <li>SproFinder</li>
-  <li><a ui-sref="about">ABOUT/[home]</a></li>
-  <li><a ui-sref="nearme">Near Me</a></li>
-  <li><a ui-sref="search">Search by Name &amp; Location</a></li>
-  <li><a ui-sref="learn">Learn</a></li>
-</ul>
-</div>
+<!-- <div class="header">
+   <! <img src="img/hot-coffee-icon-74753.png" style="width: 50px"> -->
+  <!-- <ul class="list-unstyled">
+    <li>SproFinder</li>
+    <li><a ui-sref="about">ABOUT/[home]</a></li>
+    <li><a ui-sref="nearme">Near Me</a></li>
+    <li><a ui-sref="search">Search by Name &amp; Location</a></li>
+    <li><a ui-sref="learn">Learn</a></li>
+  </ul> -->
+<!-- </div> -->
 
+<!--BOOTSTRAP NAVBAR-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="about"><img src="../img/sprofinder_logo2.png" width="140px"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a ui-sref="about">ABOUT</a></li>
+      <li><a ui-sref="nearme">NEAR ME</a></li>
+      <li><a ui-sref="search">SEARCH</a></li>
+      <li><a ui-sref="learn">LEARN</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--BOOTSTRAP NAVBAR -->
+
+
+
+  <ui-view></ui-view>
 
 
 
   </body>
-<ui-view></ui-view>
+
+
 
 
 
