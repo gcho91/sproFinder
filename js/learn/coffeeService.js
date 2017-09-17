@@ -9,9 +9,11 @@ angular.module("sproFinder").service("coffeeService", function(){
   },
   {name: "Espresso",
   image: "../img/espresso.jpg",
-  desc: "Small amount of water is pushed through a pressurized basket of finely ground coffee beans. Not for the faint of heart."},
-  {name: "Macchiatto",
-  image: "../img/link.jpg",
+  desc: "Small amount of water is pushed through a pressurized basket of finely ground coffee beans. Not for the faint of heart."
+},
+
+  {name: "Macchiato",
+  image: "../img/macchiato.jpg",
   desc: "Espresso with equal amount of steamed milk."
   },
   {name: "Affogato",
