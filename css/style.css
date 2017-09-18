@@ -116,7 +116,7 @@ background-size: cover;
 background-position: center;
 height: 94vh;
 background-repeat: no-repeat;
-color: white;
+color: black;
 }
 
 
@@ -125,8 +125,16 @@ color: white;
   font-weight: bold;
   font-size: 5em;
   margin-top: 0;
+  color: white;
 
 
+}
+
+#learnHead2{
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 2em;
+  color: white;
 }
 
 .header{

@@ -3,42 +3,44 @@
 
 
 
-<div class="learnContainer">
+ <div class="learnContainer">
+  <div class = "learnText">
+
+    <h1 id = "learnHead">Learn coffee terminology </h1>
+    <p id="learnHead2">Know how to order coffee, boldly.</p>
 
 
-<div class = "learnText">
-
-
-<h1 id = "learnHead">Learn coffee terminology </h1>
 
 
 
-<p>Trying to find good coffee around you? SproFinder got your back (and your next gibraltar)</p>
 
-<div class = "modal-container">
+    <div ng-controller="learnCtrl">
 
-  <div ng-repeat="coffee in coffeeTerms">
+      <div ng-repeat="coffee in coffeeTerms">
 
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#example" ng-click="select(coffee)">
-      {{coffee.name}}
-    </button>
+         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#example" ng-click="select(coffee)">
+          {{coffee.name}}
+        </button>
+
+       </div>
+
+       <div class="modal modal-lg" id="example">
+             <div class="modal-content">
+               <h1>{{selected.name}}</h1>
+               <hr />
+               <img src="{{selected.image}}" width="50%" alt=""> <br />
+               <h4> Description: {{selected.desc}}</h4>
+
+             </div>
+         </div>
+    </div>
+
+
+
+
+
 
   </div>
-
-  <div class="modal modal-lg" id="example">
-        <div class="modal-content">
-          <h1>{{selected.name}}</h1>
-          <hr />
-          <img src="{{selected.image}}" width="50%" alt=""> <br />
-          <h4> Description: {{selected.desc}}</h4>
-
-        </div>
-    </div>
-</div>
-
-
-
-</div>
 </div>
 
 
@@ -59,7 +61,7 @@
 
 
 
-<div class="learnContainer">
+<!-- <div class="learnContainer">
 
 
 <h1>Learn About Coffee Drinks</h1>
@@ -79,15 +81,14 @@
 
   </div>
 
-  <div class="modal modal-lg" id="example">
+  <div class="modal modal-lg" id="example{{$index}}">
         <div class="modal-content">
-          <h1>{{selected.name}}</h1>
-          <hr />
+{{selected.desc}}
           <img src="{{selected.image}}" width="50%" alt=""> <br />
-          <h4> Description: {{selected.desc}}</h4>
+
 
         </div>
     </div>
 </div>
 
- </div>
+ </div> -->
