@@ -6,17 +6,17 @@ angular.module("sproFinder", ["ui.router"]).config(function($stateProvider, $url
   })
   .state("nearme", {
     url: "/nearme",
-    templateUrl: "./js/nearme/nearmeTmpl.html",
+    templateUrl: "js/nearme/nearmeTmpl.html",
     controller: "nearmeCtrl"
   })
   .state("search", {
     url: "/search",
-    templateUrl: "./js/search/searchTmpl.html",
+    templateUrl: "js/search/searchTmpl.html",
     controller: "searchCtrl"
   })
   .state("learn", {
     url: "/learn",
-    templateUrl: "./js/learn/learnTmpl.html",
+    templateUrl: "js/learn/learnTmpl.html",
     controller: "learnCtrl"
   })
 
