@@ -7,38 +7,100 @@
 <!-- <img src="img/spag.jpg" style="width: 500px"> -->
 
 
-<div ng-repeat = "coffee in coffeeTerms">
+
+<div class = "modal-container">
+
+  <div ng-repeat="coffee in coffeeTerms">
+
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#example" ng-click="select(coffee)">
+      {{coffee.name}}
+    </button>
+
+  </div>
+
+  <div class="modal modal-lg" id="example">
+        <div class="modal-content">
+          <h1>{{selected.name}}</h1>
+          <hr />
+          <img src="{{selected.image}}" width="50%" alt=""> <br />
+          <h4> Description: {{selected.desc}}</h4>
+
+        </div>
+    </div>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dfajdsfhjdsjhfdjfhjsdhfajksdhfjdskhfadsf -->
+
+
+
+<!-- do not touch !!!!!! -->
+<!-- <div class="modal-container" ng-repeat = "coffee in coffeeTerms"> -->
+  <!-- <h2>Modal Example</h2> -->
+  <!-- Trigger the modal with a button -->
+  <!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"> {{coffee.name}}</button> -->
+
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="myModal" role="dialog"> -->
+    <!-- <div class="modal-dialog"> -->
+
+      <!-- Modal content-->
+      <!-- <div class="modal-content"> -->
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Title</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal. {{coffee.desc}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->
+<!--modal ends -->
+
+
+
+<!-- do not TOUCH !!!!!-->
+
+
+
+
+<!--BELOW HERE IS NG REPET -->
+<!-- <div ng-repeat = "coffee in coffeeTerms">
   {{coffee.name}} <br>
   {{coffee.desc}} <br />
   <img src="{{ coffee.image}}" width = "50%" />
 <hr />
-</div>
-<!-- {{coffeeTerms.name }} -->
-
-
-
-
-
-
-
-
-<!-- BOOTSTRAP GRID PAGE -->
-<div class = "row">
-  <div class="col-xs-12 col-lg-6 col-lg-6">
-    <img src="../img/affogato.jpg">
-  </div>
-
-  <div class="col-xs-12 col-lg-6">
-    <img src="../img/affogato.jpg">
-  </div>
-
-
-
-
-
-
-
-</div>
-<!-- END BOOTSTRAP -->
+</div> -->
+<!-- above is ng repeat -->

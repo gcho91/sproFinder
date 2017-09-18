@@ -1,6 +1,10 @@
-<div class="searchContainer">
+<div class="container">
 
-<h1>There's vomit on the sweater already</h1>
+
+<div class = "searchContainer">
+
+
+
 <h1>Search cafes by name and location</h1>
 <p>This is where you search for an individual cafe. Search by name or category and location to pull up information</p>
 
@@ -13,7 +17,7 @@
 
 
 
-<div ng-repeat = "cafe in cafes | limitTo: 3">
+<div ng-repeat = "cafe in cafes | limitTo: 3" class="resultsDiv">
 <!-- THIS SECTION IS FOR PLACING SEARCH RESULTS -->
 <br />
 <h2>{{cafe.name}}</h2>
@@ -32,5 +36,8 @@ Phone: {{ cafe.phone }}
 </div>
 <!-- end of THIS SECTION IS FOR PLACING SEARCH RESULTS -->
 </div> <!-- search container end -->
+</div>
+
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUShGBZg6t_deeiN8MH7OqHhaVWn39Y14&callback=initMap">
 </script>
