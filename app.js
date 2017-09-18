@@ -2,7 +2,7 @@ angular.module("sproFinder", ["ui.router"]).config(function($stateProvider, $url
   $urlRouterProvider.otherwise("/")
   $stateProvider.state("about", {
     url: "/",
-    templateUrl: "./js/about/aboutTmpl.html"
+    templateUrl: "js/about/aboutTmpl.html"
   })
   .state("nearme", {
     url: "/nearme",
