@@ -43,13 +43,22 @@ font-family: 'Nunito', sans-serif;
 
 
 .nearme-container {
-  display: inline-block;*/
+  /*display: inline-block;*/*/
+  /*height: 150vh;*/
+  width: 100vw;
   padding: 50px;
-  padding-top: 80px;
+  /*padding-top: 80px;*/
 
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  /*background-color: black;*/
+}
+
+#nearMeHead {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 3em;
 }
 
 #map {
@@ -83,11 +92,37 @@ color: black;
 
 
 .searchContainer {
-  margin: 0 auto;
-  width: 100vw;
+  /*margin: 0 auto;*/
+  /*width: 100vw;
 
-  background-size: cover;
+  background-size: cover;*/
   background-attachment: fixed;
+
+  background-image: url("../img/tim-wright-131720.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  width: 100%;
+
+
+  /*width: 100%;*/
+  /*background-repeat: no-repeat;*/
+  color: black;
+}
+
+.big-wrapper{
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#searchHeadline{
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 5em;
+color: white;
 }
 
 
@@ -100,8 +135,11 @@ color: black;
 
 .details-container{
   padding: 0 1%;
-}
 
+}
+.resultsDiv{
+  color: white;
+}
 
 .learnContainer{
   width: 100vw;

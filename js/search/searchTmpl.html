@@ -1,21 +1,19 @@
-<div class="container">
-
-
-<div class = "searchContainer">
 
 
 
-<h1>Search cafes by name and location</h1>
-<p>This is where you search for an individual cafe. Search by name or category and location to pull up information</p>
 
-<p>Input in text field name of cafe and zip, display top 3 results</p>
+<div class="big-wrapper">
+<div class="searchContainer">
+
+
+
+
+
+<h1 id = "searchHeadline">Search cafes by name and location</h1>
 
 <input type="text" placeholder = "search name here" ng-model="searchTerm">
 <input type="text" placeholder="search zip here" ng-model="searchZip"/>
 <button ng-click="getSomething(searchZip, searchTerm)">Search</button>
-
-
-
 
 <div ng-repeat = "cafe in cafes | limitTo: 3" class="resultsDiv">
 <!-- THIS SECTION IS FOR PLACING SEARCH RESULTS -->
@@ -38,6 +36,6 @@ Phone: {{ cafe.phone }}
 </div> <!-- search container end -->
 </div>
 
+</div>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUShGBZg6t_deeiN8MH7OqHhaVWn39Y14&callback=initMap">
-</script>
+</div>
